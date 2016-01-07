@@ -56,7 +56,7 @@ describe('Thermostat', function() {
         thermostat.powerSavingSwitch();
         expect(thermostat.powerSavingStatus()).toBe(true);
       });
-      
+
       it('switch off power saving mode', function() {
         thermostat.powerSavingSwitch();
         expect(thermostat.powerSavingStatus()).toBe(false);
@@ -97,15 +97,8 @@ describe('Thermostat', function() {
       thermostat.upButton();
       thermostat.upButton();
       thermostat.upButton();
-      thermostat.upButton();      
+      thermostat.upButton();
       expect(thermostat.energyUsage()).toEqual('Red');
     });
   });
 });
-
-
-
-
-
-
-
