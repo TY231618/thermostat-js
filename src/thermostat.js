@@ -20,7 +20,7 @@ Thermostat.prototype.upButton = function() {
 };
 
 Thermostat.prototype.downButton = function() {
-  if (this.degrees < 10) {
+  if (this.degrees <= 10) {
     throw new Error('Temperature cannot fall below 10');
   }
   else {

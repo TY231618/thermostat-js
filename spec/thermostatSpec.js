@@ -30,7 +30,7 @@ describe('Thermostat', function() {
       do {
         thermostat.downButton();
       }
-      while (thermostat.degrees >= 10);
+      while (thermostat.degrees > 10);
       expect(function(){ thermostat.downButton(); }).toThrowError('Temperature cannot fall below 10');
     });
   });
