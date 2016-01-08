@@ -33,21 +33,26 @@ Thermostat.prototype.powerSavingStatus = function() {
 };
 
 Thermostat.prototype.powerSavingSwitch = function() {
-  return this.powerSaving = !this.powerSaving;
+  this.powerSaving = !this.powerSaving;
+};
+
+
+Thermostat.prototype.energyUsage = function() {
+  if (this.degrees < 18) {
+    return 'low-usage';
+  }
+  if (this.degrees >= 18 && this.degrees < 25) {
+    return 'med-usage';
+  }
+  else {
+    return 'high-usage';
+  }
 };
 
 Thermostat.prototype.resetButton = function () {
   return this.degrees = 20;
 };
 
-Thermostat.prototype.energyUsage = function() {
-  if (this.degrees < 18) {
-    return 'Green';
-  }
-  if (this.degrees >= 18 && this.degrees < 25) {
-    return 'Yellow';
-  }
-  else {
-    return 'Red';
-  }
+Thermostat.prototype.converter = function (number) {
+  return Math.round((number - 32) * (5/9) * 100) / 100;
 };

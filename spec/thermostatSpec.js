@@ -85,11 +85,11 @@ describe('Thermostat', function() {
       thermostat.downButton();
       thermostat.downButton();
       thermostat.downButton();
-      expect(thermostat.energyUsage()).toEqual('Green');
+      expect(thermostat.energyUsage()).toEqual('low-usage');
     });
 
     it('yellow when usage is between 18 and 25', function() {
-      expect(thermostat.energyUsage()).toEqual('Yellow');
+      expect(thermostat.energyUsage()).toEqual('med-usage');
     });
 
     it('red when usage is above 25', function() {
@@ -98,7 +98,13 @@ describe('Thermostat', function() {
       thermostat.upButton();
       thermostat.upButton();
       thermostat.upButton();
-      expect(thermostat.energyUsage()).toEqual('Red');
+      expect(thermostat.energyUsage()).toEqual('high-usage');
+    });
+  });
+
+  describe('converter', function() {
+    it('fahreheit to celsius', function() {
+      expect(thermostat.converter(104)).toEqual(40);
     });
   });
 });
