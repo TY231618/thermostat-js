@@ -35,19 +35,4 @@ $(document).ready(function() {
     $('#temperature').attr('class', thermostat.energyUsage());
   };
 
-  $.ajax({
-    url : "http://api.wunderground.com/api/f136e6059a1c3177/geolookup/conditions/q/UK/London.json",
-    dataType : "jsonp",
-    success : function(parsed_json) {
-      var location = parsed_json['location']['city'];
-      var temp_f = parsed_json['current_observation']['temp_f'];
-      var temp_c = thermostat.converter(temp_f);
-      $('#current-location').text(location + ' ' + temp_c);
-
-    }
-  });
-
-
-
-
 });

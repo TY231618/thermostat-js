@@ -5,25 +5,34 @@
     <title>Thermostat</title>
     <link rel="stylesheet" href="main.css" type="text/css">
     <script src="src/jquery.js"></script>
+    <script src="src/jquery-ui.js"></script>
     <script src="src/thermostat.js"></script>
     <script src="src/interface.js"></script>
-
+    <script src="src/weather.js"></script>
   </head>
   <body>
-    <section class="button">
-      <h1>Thermostat</h1>
-      <h1 id="temperature"></h1>
-      <p>
-        <button id="temperature-up">+</button>
-        <button id="temperature-down">-</button>
-        <button id="temperature-reset">reset</button>
-        <br><br>
-        power saving mode is <span id="power-saving-status"></span>
-        <br><br>
-        <button id="powersaving-on">on</button>
-        <button id="powersaving-off">off</button>
-        <h2 id="current-location"></h2>
-      </p>
-    </section>
+    <div id="shape">
+      <section class="button">
+        <h1>Thermostat</h1>
+        <h1 id="temperature"></h1>
+        <p>
+          <button id="temperature-up">+</button>
+          <button id="temperature-down">-</button>
+          <button id="temperature-reset">reset</button>
+          <br><br>
+          power saving mode is <span id="power-saving-status"></span>
+          <br><br>
+          <button id="powersaving-on">on</button>
+          <button id="powersaving-off">off</button>
+          <br><br>
+        </p>
+      </section>
+
+    <div class="ui-widget">
+      <label for="city">Choose city: </label>
+      <input id="city">
+      Temperature: <span id="city-location"></span>
+    </div>
+  </div>
   </body>
 </html>

@@ -2,6 +2,16 @@ body {
   color: purple;
   background-color: #d8da3d;
   font-family: Verdana;
+  text-align: center;
+}
+
+#shape {
+  border-radius: 100%;
+  width: 40%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  background-color: white;
+  margin: 0 auto;
 }
 
 #temperature-up {
